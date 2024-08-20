@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
 }
 
 *, *::before, *::after {
@@ -14,204 +13,25 @@
 /* Index.css */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    position: relative; 
+    min-height: 100vh; 
+    overflow-x: hidden; 
 }
 
-header {
-    background-color: #000000;
-    width: 100dvw;
-    height: 100dvh;
-    padding: 2dvh 0;
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 887px;
-    height: 131px;
-    margin: 50px auto 0; /* Margen superior de 130px y centrado horizontal */
-    flex-shrink: 0;
-    background: rgba(255, 252, 252, 0.90);
-    border-radius: 30px;
-}
-
-
-.nav img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    margin: 0 42px; /* Ajuste de margen para separación */
-}
-
-.nav img:first-child {
-    margin-left: 0; /* Sin margen izquierdo para el primer elemento */
-}
-
-.nav img:last-child {
-    margin-right: 0; /* Sin margen derecho para el último elemento */
-}
-
-.nav img:hover {
-    transform: scale(1.1);
-}
-
-.title{
-    margin-top: 150px;
-    width: auto;
-    height: 308px;
-    flex-shrink: 0;
-}
-
-.title-1{
-    color: #FFF;
-    text-align: center;
-    font-family: Federo;
-    font-size: 270px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/img/noisy-texture-100x100-o13-d21-c-0a0a0a-t0.png');
+    opacity: 1; 
+    z-index: -1; 
+    pointer-events: none; 
 }
 
 section{
-    background-color: #000000;
     width: 100dvw;
     height: 100dvh;
-
-}
-
-/* Estilo para la sección de sabores */
-.flavors {
-    text-align: center; /* Centra el texto dentro de la sección */
-}
-
-/* Estilo para el contenedor del título */
-.title-f {
-    margin-bottom: 20px; /* Espacio debajo del título, ajusta según sea necesario */
-}
-
-/* Estilo para el título */
-.title-2 {
-    font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
-    font-weight: bold; /* Ajusta el peso de la fuente según sea necesario */
-    color: #333; /* Cambia el color del texto si es necesario */
-}
-
-
-.title-2{
-    color: #FFF;
-    font-family: Federo;
-    font-size: 130px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.flavorsvg {
-    height: 350px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Cinco columnas de ancho igual */
-    grid-gap: 10px; /* Espacio entre los SVG */
-    justify-items: center; /* Centrar los elementos horizontalmente dentro de las celdas */
-    align-items: center; /* Centrar los elementos verticalmente dentro de las celdas */
-    width: 850px; /* Establece el ancho del contenedor */
-    margin: 50px auto 0 auto; /* Agrega un margen superior de 50px y centra horizontalmente */
-    position: relative; /* Establece el contenedor como relativo para el posicionamiento absoluto de los hijos */
-}
-
-.flavorsvg img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain; /* Ajusta la imagen dentro del espacio sin distorsionarla */
-    cursor: pointer; /* Cambia el cursor a puntero al pasar sobre el SVG */
-    transition: transform 0.3s ease, filter 0.3s ease; /* Agrega una transición suave para los efectos de transformación y filtro */
-    position: relative; /* Establece el SVG como relativo para permitir que el desenfoque se aplique correctamente */
-    opacity: 70%;
-}
-
-.flavorsvg img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño del SVG ligeramente al pasar el cursor sobre él */
-    filter: blur(0); /* Sin desenfoque por defecto para el objeto sobre el que se pasa el cursor */
-    z-index: 2; /* Asegura que el SVG sobre el que se pasa el cursor esté por encima de los demás */
-}
-
-.flavorsvg::before {
-    content: ''; /* Crea un pseudo-elemento vacío */
-    position: absolute; /* Posiciona el pseudo-elemento absolutamente */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(4px); /* Aplica desenfoque a todo el contenedor */
-    z-index: 1; /* Asegura que el pseudo-elemento esté por debajo del contenido */
-    pointer-events: none; /* Permite que los eventos del puntero pasen a los elementos debajo */
-}
-/* Estilos para la sección con fondo negro */
-section.blur-section {
-    background-color: #000000;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Contenedor de las bento boxes con grid */
-.bento-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas de tamaño mínimo */
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); /* Filas de tamaño mínimo */
-    grid-gap: 20px;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-/* Estilo base para las bento boxes */
-.bento-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    /* Tamaños variables para cada bento box */
-}
-
-/* Contenido dentro de las bento boxes */
-.bento-content {
-    color: white;
-    text-align: center;
-    padding: 20px;
-    max-width: 90%;
-}
-
-/* Efecto de hover para bento boxes */
-.bento-box:hover {
-    transform: scale(1.05);
-    backdrop-filter: blur(5px); /* Menos desenfoque al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-/* Estilos específicos para cada tipo de bento box */
-.bento-box.gradient-background {
-    background: linear-gradient(135deg, #ff6b6b, #f06595);
-}
-
-.bento-box.inner-shadow {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.bento-box.background-image {
-    background-image: url('your-image-url.jpg');
-    background-size: cover;
-    background-position: center;
 }
