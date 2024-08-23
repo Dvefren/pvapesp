@@ -1,219 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-    <link rel="stylesheet" href="/public/css/Index.css"> 
-
-    <link rel="stylesheet" href="/public/css/header.css">   
-
-    <link rel="stylesheet" href="/public/css/flavors.css">
-
-    <link rel="stylesheet" href="/public/css/bentos.css">
-
-    <link rel="stylesheet" href="/public/css/brands.css">
-
-    <link rel="stylesheet" href="/public/css/footer.css">
-
-    <title>P-VAPES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/Index.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=sora@300,400,500,600,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   
+    <title>P-Vapes</title>
+    
 </head>
-
 <body>
-
     <header>
-
-        <div class="nav">
-
-            <img src="public/svg/navbar/Home.svg" alt="Home page">
-
-            <img src="public/svg/navbar/Electronic Cigarette.svg" alt="Vapes">
-
-            <img src="public/svg/navbar/Search.svg" alt="Search">
-
-            <img src="public/svg/navbar/Mail.svg" alt="Contact Us">
-
-            <img src="public/svg/navbar/User.svg" alt="Profile">
-
-            <img src="public/svg/navbar/Shopping Cart.svg" alt="Order">
-
+        <div id="textContainer">
+            <h1>P-Vapes</h1>
+            <h2>The art of vaping.</h2>
         </div>
-
-        <div class="title">
-
-            <h1 class="title-1">P-VAPES</h1>
-
+        
+        <!-- New Image Container -->
+        <div id="imageContainer">
+            <img src="//vapematemx.com/cdn/shop/files/Asset12_png.webp?v=1719590508" alt="Image 1">
+            <img src="//vapematemx.com/cdn/shop/files/05._Double_Apple.webp?v=1720558054" alt="Image 2">
+            <img src="//vapematemx.com/cdn/shop/files/Lemon_lime_ice_55257c0e-c55e-4fed-a5bb-d4e8d3b43e66.webp?v=1720565023" alt="Image 3">
+            <img src="//vapematemx.com/cdn/shop/files/LemonLimeIce.webp?v=1720208174" alt="Image 4">
+            <img src="//vapematemx.com/cdn/shop/files/pineapple_punch_craftbox_v-play_20k_puffs_disposable_171858.webp?v=1719515145" alt="Image 5">
         </div>
+        
+        <!-- Button Container -->
+        <div id="buttonContainer">
+            <!-- SVG Icon for Menu -->
+            
+            <div id="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="140" color="#c8ff00" fill="none">
+                    <path d="M7.5 8V6.36364C7.5 3.95367 9.51472 2 12 2C14.4853 2 16.5 3.95367 16.5 6.36364V8" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13.8816 7.5H10.1184C6.22973 7.5 4.7255 8.48796 3.6501 12.2373C2.68147 15.6144 2.19716 17.3029 2.70352 18.6124C3.01361 19.4143 3.56418 20.1097 4.28549 20.6104C6.8944 22.4216 16.9865 22.5043 19.7145 20.6104C20.4358 20.1097 20.9864 19.4143 21.2965 18.6124C21.8028 17.3029 21.3185 15.6144 20.3499 12.2373C19.3173 8.63723 17.9313 7.5 13.8816 7.5Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M11 11H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </div>
 
+            <div id="menuButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none">
+                    <path d="M20 12L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 5L4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 19L4 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
     </header>
 
-    <section class="flavors">
-        <div class="column left">
-            <div class="titlef">
-                <div>F</div>
-                <div>L</div>
-                <div>A</div>
-                <div>V</div>
-                <div>O</div>
-                <div>R</div>
-                <div>S</div>
+    <!-- Menu Overlay -->
+    <div id="menuOverlay">
+        <div id="closeButton">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div id="menuContent">
+            <div class="menu-column left">
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
+                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="menu-text">Inicio</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
+                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="menu-text">Vapes</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
+                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="menu-text">Contacto</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
+                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="menu-text">Perfil</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-column right">
+                <h3>Información</h3>
+                <!-- Agrega aquí la información adicional -->
+                <p>Detalles sobre la tienda, políticas, etc.</p>
             </div>
         </div>
-        <div class="column right">
-            <div class="button-grid">
-                <button class="button button-watermelon" data-text="Watermelon">
-                    <span class="actual-text">&nbsp;Watermelon&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Watermelon&nbsp;</span>
-                </button>
-                <button class="button button-apple" data-text="Apple">
-                    <span class="actual-text">&nbsp;Apple&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Apple&nbsp;</span>
-                </button>
-                <button class="button button-coco" data-text="Coco">
-                    <span class="actual-text">&nbsp;Coco&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Coco&nbsp;</span>
-                </button>
-                <button class="button button-banana" data-text="Banana">
-                    <span class="actual-text">&nbsp;Banana&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Banana&nbsp;</span>
-                </button>
-                <button class="button button-mint" data-text="Mint">
-                    <span class="actual-text">&nbsp;Mint&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Mint&nbsp;</span>
-                </button>
-                <button class="button button-soda" data-text="Soda">
-                    <span class="actual-text">&nbsp;Soda&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Soda&nbsp;</span>
-                </button>
-                <button class="button button-pineapple" data-text="Pineapple">
-                    <span class="actual-text">&nbsp;Pineapple&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Pineapple&nbsp;</span>
-                </button>
-                <button class="button button-orange" data-text="Orange">
-                    <span class="actual-text">&nbsp;Orange&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Orange&nbsp;</span>
-                </button>
-                <button class="button button-lemon" data-text="Lemon">
-                    <span class="actual-text">&nbsp;Lemon&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Lemon&nbsp;</span>
-                </button>
-                <button class="button button-raspberry" data-text="Raspberry">
-                    <span class="actual-text">&nbsp;Raspberry&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Raspberry&nbsp;</span>
-                </button>
-                <button class="button button-cherry" data-text="Cherry">
-                    <span class="actual-text">&nbsp;Cherry&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Cherry&nbsp;</span>
-                </button>
-                <button class="button button-kiwi" data-text="Kiwi">
-                    <span class="actual-text">&nbsp;Kiwi&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Kiwi&nbsp;</span>
-                </button>
-                <button class="button button-ice" data-text="Ice">
-                    <span class="actual-text">&nbsp;Ice&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Ice&nbsp;</span>
-                </button>
-                <button class="button button-peach" data-text="Peach">
-                    <span class="actual-text">&nbsp;Peach&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;Peach&nbsp;</span>
-                </button>
-                <button class="button button-more" data-text="More">
-                    <span class="actual-text">&nbsp;More&nbsp;</span>
-                    <span aria-hidden="true" class="hover-text">&nbsp;More&nbsp;</span>
-                </button>
+    </div>
+
+    <section>
+        <div id="brandsSliderContainer">
+            <div id="brandsSlider">
+                <!-- Ejemplo de imágenes de marcas -->
+                <div class="slider-slide"><img src="public/img/brands/bugatti.png" alt="Marca 1"></div>
+                <div class="slider-slide"><img src="public/img/brands/CZAR.png" alt="Marca 2"></div>
+                <div class="slider-slide"><img src="public/img/brands/instabar.png" alt="Marca 3"></div>
+                <div class="slider-slide"><img src="public/img/brands/geekbar.png" alt="Marca 4"></div>
+                <div class="slider-slide"><img src="public/img/brands/vp.png" alt="Marca 5"></div>
+                <div class="slider-slide"><img src="public/img/brands/iplay.png" alt="Marca 6"></div>
+                <!-- Añade más imágenes según sea necesario -->
             </div>
-            
         </div>
-    </section>
+        
     
-    <section class="bento-section">
-
-        <div class="bentos-grid">
-
-            <div class="bento-box box1"></div>
-
-            <div class="bento-box box2"></div>
-
-            <div class="bento-box box3"></div>
-
-            <div class="bento-box box4"></div>
-
-            <div class="bento-box box6"></div>
-
+        <div id="flavorsGridContainer">
+            <div id="flavorsGrid">
+                <div id="flavor1" class="grid-item">
+                    <div class="outer">
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Orange</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor2" class="grid-item">
+                    <div class="outer">
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Banana</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor3" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Lime</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor4" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Kiwi</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor5" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Watermelon</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor6" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Coco</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor7" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Ice</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor8" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Apple</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor9" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Pineapple</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor10" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Peach</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor11" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Coke</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor12" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">More</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor13" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Mint</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor14" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Cherry</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flavor15" class="grid-item">
+                    <div class="outer">
+                        <div class="dot"></div>
+                        <div class="card">
+                            <div class="ray"></div>
+                            <div class="text">Raspberry</div>
+                            <div></div>
+                            <div class="line topl"></div>
+                            <div class="line leftl"></div>
+                            <div class="line bottoml"></div>
+                            <div class="line rightl"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repite para cada grid-item... -->
+            </div>
         </div>
 
-    </section>
+        <div class="bento-container">
+            <div class="bentos-grid">
+
+                <div class="bento-box box1"></div>
+    
+                <div class="bento-box box2"></div>
+    
+                <div class="bento-box box3"></div>
+    
+                <div class="bento-box box4"></div>
+    
+                <div class="bento-box box6"></div>
+    
+            </div>
+        </div>
         
-    <section class="brands">
-
-
-        <div class="imgbrands">
-
-            <img src="/public/img/brands/bugatti.png" alt="Bugatti">
-
-            <img src="/public/img/brands/CZAR.png" alt="CZAR">
-
-            <img src="/public/img/brands/instabar.png" alt="Instabar">
-
-            <img src="/public/img/brands/iplay.png" alt="Iplay">
-
-            <img src="/public/img/brands/geekbar.png" alt="Geekbar">
-
-            <img src="/public/img/brands/vp.png" alt="vp">
-
-
-        </div>
-
     </section>
+
+    <footer>
+        <div class="top-section">
+            <button class="button" id="scrollToTopButton">
+                <svg class="svgIcon" viewBox="0 0 384 512">
+                    <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+                </svg>
+            </button>
+        </div>
         
-    <footer class="footer">
+    
+        <div class="main-footer">
+            <div class="footer-column logo-info">
+                <div class="logos">
+                    <img src="/public/img/Efren.png" alt="Logo Efren" class="logo efren-logo">
+                    <img src="/public/img/Luis.png" alt="Logo Luis" class="logo luis-logo">
+                </div>
+                <p class="copyright">© 2024 efrenlopez.dev@outlook.com. </p>
+                <p>Todos los derechos reservados.</p>
+            </div>
+    
+            <div class="footer-column legal-info">
 
-        <div class="footer-column">
-
-            <h3>Acerca</h3>
-
-            <ul>
-
-                <li><a href="#">Nosotros</a></li>
-
-                <li><a href="#">Blog</a></li>
-
-            </ul>
-
+            </div>
+    
+            <div class="footer-column about-info">
+                    <div class="footer-column">
+                        <h3>Información Legal</h3>
+                        <ul>
+                            <li><a href="#">Temas Legales</a></li>
+                            <li><a href="#">Políticas de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Acerca</h3>
+                        <ul>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                <div class="footer-column">
+                    <h3>Tienda</h3>
+                    <ul>
+                        <li><a href="#">Mayoreo</a></li>
+                        <li><a href="#">Menudeo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="#">Correo</a></li>
+                        <li><a href="#">Redes Sociales</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-column">
-
-            <h3>Tienda</h3>
-
-            <ul>
-
-                <li><a href="#">Mayoreo</a></li>
-
-                <li><a href="#">Menudeo</a></li>
-
-            </ul>
-
+    
+        <div class="bottom-section">
+            <h1>P-Vapes</h1>
         </div>
-
-        <div class="footer-column">
-
-            <h3>Contacto</h3>
-
-            <ul>
-
-                <li><a href="#">Correo</a></li>
-
-                <li><a href="#">Redes sociales</a></li>
-
-            </ul>
-
-        </div>
-
     </footer>
+    
+    
 
-    <script src="/public/js/hoverimg.js"></script>
+    <script src="/public/js/menu.js"></script>
+    <script src="/public/js/scroll.js" defer></script>
+    <script src="/public/js/swiper.js"></script>
+    <script src="/public/js/top.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script>
 
 </body>
 </html>
