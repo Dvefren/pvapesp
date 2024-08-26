@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/public/css/Index.css">
     <link href="https://api.fontshare.com/v2/css?f[]=sora@300,400,500,600,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    
     <title>P-Vapes</title>
     
@@ -27,7 +28,9 @@
         <!-- Button Container -->
         <div id="buttonContainer">
             <!-- SVG Icon for Menu -->
-            
+           <div class="logout" id="logout">
+            <h3>Logout</h3>
+           </div> 
             <div id="cart">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="140" color="#c8ff00" fill="none">
                     <path d="M7.5 8V6.36364C7.5 3.95367 9.51472 2 12 2C14.4853 2 16.5 3.95367 16.5 6.36364V8" stroke="currentColor" stroke-width="1.5" />
@@ -408,7 +411,8 @@
     <script src="/public/js/scroll.js" defer></script>
     <script src="/public/js/swiper.js"></script>
     <script src="/public/js/top.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs" type="module"></script>
+    <script src="/api/auth.js"></script>
 
 </body>
 </html>

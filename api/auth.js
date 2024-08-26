@@ -28,12 +28,16 @@ formR.addEventListener("submit", (e) => {
     })
     .then(function (response) {
       console.log(response);
+      if (response.status == 200) {
+      response.redirect("/home");
+    }
     })
     .catch(function (error) {
       console.log(error);
     });
 });
 }
+
 //LOGIN
 
 const formL = document.getElementById("login");
@@ -56,11 +60,38 @@ formL.addEventListener("submit", (e) => {
   .then(function (response) {
     console.log(response);
     if (response.status == 200) {
-      window.location.href = "../index.html";
+      response.redirect("/home");
     }
   })
   .catch(function (error) {
     console.log(error);
   });
 });
+}
+
+// LOGOUT
+
+const logout = document.getElementById("logout");
+
+if(logout) {
+
+  logout.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    axios.post(`${API}/logout`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    })
+    .then(function (response) {
+      console.log(response);
+      if (response.status == 200) {
+        window.location.href = "Views/signin.html";
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  });
 }
