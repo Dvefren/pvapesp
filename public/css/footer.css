@@ -1,0 +1,214 @@
+/* General design */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-primary: #0D0D0D;
+    --black-secondary: #1A1A1A;
+    --dark-gray: #333333;
+    --bright-yellow-green: #C8FF00;
+    --dark-yellow-green: #1d2400;
+    --soft-white: #F2F2F2;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Sora', sans-serif;
+}
+
+.top-section {
+    background-color: var(--bright-yellow-green); 
+    height: 15dvh;
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.main-footer {
+    background-color: var(--dark-yellow-green);
+    display: flex;
+    padding: 20px;
+    color: #ffffff; 
+    height: 35dvh; 
+    justify-content: space-between;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column; 
+    padding: 10px; 
+    margin-top: 50px;
+}
+
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none; 
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.footer-column a:hover {
+    text-decoration: underline; 
+}
+
+.footer-column h3 {
+    color: var(--bright-yellow-green);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px; 
+}
+
+.footer-column ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto; 
+    margin-left: 20px; 
+}
+
+.copyright {
+    font-size: 14px; 
+    margin: 10px 0;
+}
+
+.bottom-section {
+    background-color: var(--dark-yellow-green); 
+    height: 50dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0 10px; 
+}
+
+.bottom-section h1 {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 21vw; 
+    text-align: center; 
+    color: var(--bright-yellow-green);
+    line-height: 1; 
+}
+
+.about-info {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 100px; 
+}
+
+.logo-info {
+    text-align: left; 
+    margin-bottom: 20px; 
+    margin-left: 25px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.logos {
+    display: flex; 
+    position: relative; 
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+.efren-logo {
+    z-index: 2; 
+}
+
+.luis-logo {
+    z-index: 1; 
+    margin-left: -20px; 
+    opacity: 0.95; 
+}
+
+.copyright {
+    font-size: 14px; 
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.copyright{
+    font-weight: 600;
+    color: var(--bright-yellow-green);
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(20, 30, 1, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: var(--dark-yellow-green);
+    align-items: center;
+}
+
+.button:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    font-size: 0px;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+}
+
+#brandsSliderContainer{
+    border-top: 2.5px solid var(--bright-yellow-green);
+    border-bottom: 2.5px solid var(--bright-yellow-green);
+    background-color: var(--dark-yellow-green);
+}

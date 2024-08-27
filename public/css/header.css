@@ -1,0 +1,75 @@
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--bright-yellow-green);
+    padding: 14px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: 0 auto;
+    background-color: var(--dark-yellow-green);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 30px; /* Asegúrate de que el border-radius sea consistente */
+    transition: background-color .5s ease, color 0.5s ease, border-radius 0.5s ease; /* Incluye border-radius en la transición */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+nav ul li a:focus {
+    outline: none; /* Elimina el borde de enfoque al hacer clic */
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    align-items: center; /* Centra los iconos verticalmente */
+    gap: 20px; /* Espacio entre los iconos */
+    height: 50px;
+    background-color: var(--dark-yellow-green);
+    border: 2px solid var(--bright-yellow-green);
+    border-radius: 30px;
+    width: 100px;
+}
+
+.icons-container svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--bright-yellow-green);
+    cursor: pointer;
+    transition: stroke 0.3s ease;
+}
+
+.icons-container svg:hover {
+    stroke: #fff; /* Cambia el color al pasar el ratón */
+}

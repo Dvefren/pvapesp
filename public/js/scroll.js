@@ -1,16 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('#imageContainer');
-    const images = Array.from(container.querySelectorAll('img'));
-    let currentIndex = 0;
-    let lastScrollTop = 0;
-    let isAnimating = false;
-    let requestId = null;
+    if (!container) {
+        console.error('The element with ID "imageContainer" was not found.');
+        return;
+    }
 
-    // Asegúrate de que las imágenes están cargadas
+    const images = Array.from(container.querySelectorAll('img'));
     if (images.length === 0) {
         console.error('No images found in the imageContainer.');
         return;
     }
+
+    let currentIndex = 0;
+    let lastScrollTop = 0;
+    let isAnimating = false;
+    let requestId = null;
 
     // Inicialmente mostrar solo la primera imagen
     images.forEach((img, index) => {
@@ -35,10 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (scrollTop > lastScrollTop) {
                 // Desplazamiento hacia abajo
-                currentIndex = (currentIndex + 1) % images.length;
+                if (currentIndex < images.length - 1) {
+                    currentIndex = (currentIndex + 1) % images.length;
+                }
             } else {
                 // Desplazamiento hacia arriba
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                if (currentIndex > 0) {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                }
             }
 
             if (!isAnimating) {

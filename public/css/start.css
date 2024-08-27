@@ -1,0 +1,73 @@
+:root {
+    --black-primary: #0D0D0D;
+    --black-secondary: #1A1A1A;
+    --dark-gray: #333333;
+    --bright-yellow-green: #C8FF00;
+    --dark-yellow-green: #1d2400;
+    --soft-white: #F2F2F2;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;    /* Centra horizontalmente */
+    height: 150vh;          /* Ocupa toda la altura de la ventana */
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+    color: #fff;     /* Color blanco */
+    margin: 0;
+    padding: 20px;
+    margin-top: -100px;
+}
+
+h1 span {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre las palabras, ajusta según sea necesario */
+    position: relative; /* Necesario para ajustar la posición */
+}
+
+h2 {
+    font-size: 7rem; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+    color: var(--bright-yellow-green); /* Color amarillo-verde brillante */
+    margin: 0;
+    padding: 5px;
+}
+
+h2 span {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre las palabras, ajusta según sea necesario */
+    position: relative; /* Necesario para ajustar la posición */
+}
+
+.image-container {
+    height: 800px; /* Ajusta el tamaño del contenedor según sea necesario */
+    width: 600px;  /* Ajusta el tamaño del contenedor según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    border-radius: 10px; /* Opcional: agrega bordes redondeados */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity -15s ease-in-out; /* Transición suave de opacidad */
+}
+
+.image-container img.visible {
+    opacity: 1;
+}

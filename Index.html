@@ -1,329 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="/public/css/Index.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=sora@300,400,500,600,700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-   
-    <title>P-Vapes</title>
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/start.css">
+    <link rel="stylesheet" href="/public/css/slide.css">
+    <link rel="stylesheet" href="/public/css/cards.css">
+    <link rel="stylesheet" href="/public/css/bento.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=sora@300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@300,400,500,600,700,1&f[]=clash-grotesk@200,300,400,500,600,700,1&f[]=styro@200,300,400,500,600,700&f[]=anton@400&f[]=archivo@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901,1,2&f[]=plein@300,301,400,401,500,501,700,701,900,901,1,2&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <header>
-        <div id="textContainer">
-            <h1>P-Vapes</h1>
-            <h2>The art of vaping.</h2>
-        <!-- New Image Container -->
-        <div id="imageContainer">
-            <img src="//vapematemx.com/cdn/shop/files/Asset12_png.webp?v=1719590508" alt="Image 1">
-            <img src="//vapematemx.com/cdn/shop/files/05._Double_Apple.webp?v=1720558054" alt="Image 2">
-            <img src="//vapematemx.com/cdn/shop/files/Lemon_lime_ice_55257c0e-c55e-4fed-a5bb-d4e8d3b43e66.webp?v=1720565023" alt="Image 3">
-            <img src="//vapematemx.com/cdn/shop/files/LemonLimeIce.webp?v=1720208174" alt="Image 4">
-            <img src="//vapematemx.com/cdn/shop/files/pineapple_punch_craftbox_v-play_20k_puffs_disposable_171858.webp?v=1719515145" alt="Image 5">
-        </div>
-        
-        <!-- Button Container -->
-        <div id="buttonContainer">
-            <!-- SVG Icon for Menu -->
-            
-            <div id="cart">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="140" color="#c8ff00" fill="none">
-                    <path d="M7.5 8V6.36364C7.5 3.95367 9.51472 2 12 2C14.4853 2 16.5 3.95367 16.5 6.36364V8" stroke="currentColor" stroke-width="1.5" />
-                    <path d="M13.8816 7.5H10.1184C6.22973 7.5 4.7255 8.48796 3.6501 12.2373C2.68147 15.6144 2.19716 17.3029 2.70352 18.6124C3.01361 19.4143 3.56418 20.1097 4.28549 20.6104C6.8944 22.4216 16.9865 22.5043 19.7145 20.6104C20.4358 20.1097 20.9864 19.4143 21.2965 18.6124C21.8028 17.3029 21.3185 15.6144 20.3499 12.2373C19.3173 8.63723 17.9313 7.5 13.8816 7.5Z" stroke="currentColor" stroke-width="1.5" />
-                    <path d="M11 11H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                </svg>
-            </div>
 
-            <div id="menuButton">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none">
-                    <path d="M20 12L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20 5L4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20 19L4 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </div>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#">Why P-Vapes</a></li>
+                    <li><a href="#">Shop Vapes</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="icons-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" color="#fff" height="24">
+                <path d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" color="#fff" height="24">
+                <path d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+            </svg>
         </div>
     </header>
 
-    <!-- Menu Overlay -->
-    <div id="menuOverlay">
-        <div id="closeButton">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
-                <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </div>
-        <div id="menuContent">
-            <div class="menu-column left">
-                <ul>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
-                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span class="menu-text">Inicio</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
-                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span class="menu-text">Vapes</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
-                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span class="menu-text">Contacto</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="menu-icon">
-                            <path d="M4 3V5.07692C4 7.07786 4 8.07833 4.14533 8.91545C4.94529 13.5235 8.90656 17.1376 13.9574 17.8674C14.8749 18 16.8068 18 19 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M17 21C17.6068 20.4102 20 18.8403 20 18C20 17.1597 17.6068 15.5898 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span class="menu-text">Perfil</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu-column right">
-                <h3>Información</h3>
-                <!-- Agrega aquí la información adicional -->
-                <p>Detalles sobre la tienda, políticas, etc.</p>
-            </div>
-        </div>
-    </div>
+    <section class="home">
 
-    <section>
+        <div class="start">
+            <h1>
+                <span>The</span>
+                <span>art</span>
+                <span>of</span>
+                <span>vaping.</span>
+            </h1>
+        
+            <h2>
+                <span>P</span>
+                <span>-</span>
+                <span>Vapes</span>
+            </h2>
+        
+            <div id="imageContainer" class="image-container">
+                <img id="image2" src="//vapematemx.com/cdn/shop/files/05._Double_Apple.webp?v=1720558054" alt="Image 2">
+                <img id="image3" src="//vapematemx.com/cdn/shop/files/Lemon_lime_ice_55257c0e-c55e-4fed-a5bb-d4e8d3b43e66.webp?v=1720565023" alt="Image 3">
+                <img id="image4" src="//vapematemx.com/cdn/shop/files/Asset12.png?v=1716224946" alt="Image 4">
+                    <img id="image7" src="//vapematemx.com/cdn/shop/files/LemonLimeIce.webp?v=1720208174" alt="Image 7">
+            </div>
+        </div>
+
         <div id="brandsSliderContainer">
+
             <div id="brandsSlider">
+
                 <!-- Ejemplo de imágenes de marcas -->
+
                 <div class="slider-slide"><img src="public/img/brands/bugatti.png" alt="Marca 1"></div>
                 <div class="slider-slide"><img src="public/img/brands/CZAR.png" alt="Marca 2"></div>
                 <div class="slider-slide"><img src="public/img/brands/instabar.png" alt="Marca 3"></div>
                 <div class="slider-slide"><img src="public/img/brands/geekbar.png" alt="Marca 4"></div>
                 <div class="slider-slide"><img src="public/img/brands/vp.png" alt="Marca 5"></div>
                 <div class="slider-slide"><img src="public/img/brands/iplay.png" alt="Marca 6"></div>
+
+                
                 <!-- Añade más imágenes según sea necesario -->
+
             </div>
+
         </div>
         
-    
-        <div id="flavorsGridContainer">
-            <div id="flavorsGrid">
-                <div id="flavor1" class="grid-item">
-                    <div class="outer">
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Orange</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
+
+        <div class="vapes">
+            <div class="parent">
+                <div class="div1">
+                    <div class="info">
+                        <span class="title">V-PLAY</span>
+                        <span class="slogan">PUFF & PLAY</span>
+                    </div>
+                    <img src="//vapematemx.com/cdn/shop/files/blueberry_grapefruit_craftbox_v-play_20k_puffs_disposable_171845.webp?v=1719514983" alt="Imagen 1">
+                </div>
+                
+                <div class="div2">
+                    <img src="//vapematemx.com/cdn/shop/files/Chill_Menthol_c12400ac-f819-4f08-b084-0af381a548c9.webp?v=1720565023" alt="Imagen 2">
+                    <div class="info">
+                        <span class="title">insta bar</span>
+                        <span class="slogan">instaBar, instant joy</span>
                     </div>
                 </div>
-                <div id="flavor2" class="grid-item">
-                    <div class="outer">
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Banana</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
+
+
+                <div class="div3">
+                    <div class="info">
+                        <span class="title">CZAR</span>
+                        <span class="slogan">BUILT TO IMPRESS</span>
+                    </div>
+                    <img src="/public/img/vapes/CZAR/czar-02-home.png" alt="Imagen 3">
+                </div>
+
+
+                <div class="div4">
+                    <img src="//vapematemx.com/cdn/shop/files/Asset2_png.webp?v=1719591305" alt="Imagen 4">
+                    <div class="info">
+                        <span class="title">BUGATTI</span>
+                        <span class="slogan">Experience the Bugatti Difference</span>
                     </div>
                 </div>
-                <div id="flavor3" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Lime</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
+
+
+                <div class="div5">
+                    <div class="text-content">
+                        <span class="want-more">WANT MORE?</span>
+                        <span class="take-a">TAKE A</span>
+                        <span class="look">LOOK.</span>
                     </div>
                 </div>
-                <div id="flavor4" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Kiwi</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
+
+
+                <div class="div6">
+                    <img src="//vapematemx.com/cdn/shop/files/02._Chaparrita_De_Uva.webp?v=1720558054" alt="Imagen 6">
+                    <div class="info">
+                        <span class="title">IPLAY</span>
+                        <span class="slogan">Vape For Better Life</span>
                     </div>
                 </div>
-                <div id="flavor5" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Watermelon</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
+
+                
+                <div class="div7">
+                    <img src="//vapematemx.com/cdn/shop/files/Raspberry-Watermelon_b60ac986-b471-4f6d-ac15-f3c597a26a94_jpg.webp?v=1720023436" alt="Imagen 7">
+                    <div class="info">
+                        <span class="title">GEEK BAR</span>
+                        <span class="slogan">Geek Out Your Taste</span>
                     </div>
                 </div>
-                <div id="flavor6" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Coco</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor7" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Ice</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor8" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Apple</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor9" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Pineapple</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor10" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Peach</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor11" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Coke</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor12" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">More</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor13" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Mint</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor14" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Cherry</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flavor15" class="grid-item">
-                    <div class="outer">
-                        <div class="dot"></div>
-                        <div class="card">
-                            <div class="ray"></div>
-                            <div class="text">Raspberry</div>
-                            <div></div>
-                            <div class="line topl"></div>
-                            <div class="line leftl"></div>
-                            <div class="line bottoml"></div>
-                            <div class="line rightl"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repite para cada grid-item... -->
             </div>
         </div>
+            
+        
 
         <div class="bento-container">
+
             <div class="bentos-grid">
 
                 <div class="bento-box box1"></div>
@@ -342,23 +177,35 @@
     </section>
 
     <footer>
+
         <div class="top-section">
+
             <button class="button" id="scrollToTopButton">
+
                 <svg class="svgIcon" viewBox="0 0 384 512">
                     <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
                 </svg>
+
             </button>
+
         </div>
         
     
         <div class="main-footer">
+
             <div class="footer-column logo-info">
+
                 <div class="logos">
+            
                     <img src="/public/img/Efren.png" alt="Logo Efren" class="logo efren-logo">
+
                     <img src="/public/img/Luis.png" alt="Logo Luis" class="logo luis-logo">
                 </div>
+
                 <p class="copyright">© 2024 efrenlopez.dev@outlook.com. </p>
+
                 <p>Todos los derechos reservados.</p>
+
             </div>
     
             <div class="footer-column legal-info">
@@ -366,13 +213,16 @@
             </div>
     
             <div class="footer-column about-info">
+
                     <div class="footer-column">
+
                         <h3>Información Legal</h3>
                         <ul>
                             <li><a href="#">Temas Legales</a></li>
                             <li><a href="#">Políticas de Privacidad</a></li>
                         </ul>
                     </div>
+
                     <div class="footer-column">
                         <h3>Acerca</h3>
                         <ul>
@@ -380,6 +230,7 @@
                             <li><a href="#">Blog</a></li>
                         </ul>
                     </div>
+
                 <div class="footer-column">
                     <h3>Tienda</h3>
                     <ul>
@@ -387,6 +238,7 @@
                         <li><a href="#">Menudeo</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
                     <h3>Contacto</h3>
                     <ul>
@@ -394,21 +246,22 @@
                         <li><a href="#">Redes Sociales</a></li>
                     </ul>
                 </div>
+
             </div>
         </div>
     
         <div class="bottom-section">
             <h1>P-Vapes</h1>
         </div>
+        
     </footer>
-    
-    
 
-    <script src="/public/js/menu.js"></script>
     <script src="/public/js/scroll.js" defer></script>
+    <script src="/public/js/imgconatiner.js"></script>
+    <script src="/public/js/vapes.js"></script>
     <script src="/public/js/swiper.js"></script>
     <script src="/public/js/top.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script>
+    <script src="/public/js/cursor.js"></script>
 
 </body>
 </html>
