@@ -1037,14 +1037,3 @@ footer {
     bottom: unset;
     transition-duration: 0.3s;
 }
-
-.logout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: 100px;
-    color: yellowgreen;
-    border: 1px solid yellowgreen;
-    border-radius: 10px;
-}

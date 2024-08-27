@@ -78,7 +78,7 @@ if(logout) {
   logout.addEventListener("click", (e) => {
     e.preventDefault();
     
-    axios.post(`${API}/logout`, {
+    axios.post(`${API}/logout`, {}, {
       headers: {
         "Content-Type": "application/json",
       },
