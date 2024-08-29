@@ -1,0 +1,119 @@
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Fondo difuminado */
+.modal-background {
+    position: fixed; /* Cubre toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 59, 59, 0.216); /* Fondo gris oscuro con opacidad */
+    filter: blur(15px); /* Ajusta el nivel de desenfoque */
+    z-index: 0; /* Asegura que el fondo esté detrás del contenido del modal */
+}
+
+/* Modal content */
+.modal-content {
+    position: fixed; /* Mantiene el contenido en una posición fija */
+    top: 15px; /* Ajusta la distancia desde el borde superior */
+    right: 15px; /* Ajusta la distancia desde el borde derecho */
+    background-color: var(--soft-white);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    max-width: 500px; /* Max width of the modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Asegura que el contenido esté encima del fondo difuminado */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--black-primary);
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--black-primary);
+    width: 100%;
+    background-color: var(--soft-white);
+    color: var(--black-primary);
+}
+
+/* Swipe button styling */
+.swipe {
+    position: relative;
+    background-color: #000000;
+    width: 100%;
+    height: 60px;
+    color: var(--soft-white);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.35);
+    border-left: 0.5px solid rgba(0, 0, 0, 0.35);
+    padding-left: 40px;
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.swipe:hover {
+    padding-left: 0;
+    padding-right: 40px;
+    color: var(--soft-white);
+}
+
+.container {
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: #C8FF00;
+    border-radius: 50%;
+    transition: 0.35s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black-primary);
+}
+
+.swipe:hover .container {
+    left: calc(100% - 55px);
+    color: #000000;
+}
+
+/* Title styling */
+.contact-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--black-primary);
+}

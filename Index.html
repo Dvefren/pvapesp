@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/public/css/Index.css">
+    <link rel="stylesheet" href="/public/css/modal.css">
+    <link rel="stylesheet" href="/public/css/scrollbar.css">
     <link rel="stylesheet" href="/public/css/header.css">
-    <link rel="stylesheet" href="/public/css/contacto.css">
     <link rel="stylesheet" href="/public/css/start.css">
     <link rel="stylesheet" href="/public/css/slide.css">
     <link rel="stylesheet" href="/public/css/cards.css">
+    <link rel="stylesheet" href="/public/css/whyus.css">
     <link rel="stylesheet" href="/public/css/bento.css">
     <link rel="stylesheet" href="/public/css/footer.css">
 
+    <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@300,400,500,600,700,1&f[]=clash-grotesk@200,300,400,500,600,700,1&f[]=styro@200,300,400,500,600,700&f[]=anton@400&f[]=archivo@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901,1,2&f[]=plein@300,301,400,401,500,501,700,701,900,901,1,2&f[]=sora@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,1,2&display=swap" rel="stylesheet">
 
-    <link href="https://api.fontshare.com/v2/css?f[]=sora@300,400,500,600,700&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@300,400,500,600,700,1&f[]=clash-grotesk@200,300,400,500,600,700,1&f[]=styro@200,300,400,500,600,700&f[]=anton@400&f[]=archivo@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901,1,2&f[]=plein@300,301,400,401,500,501,700,701,900,901,1,2&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-   
+    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+
     <title>P-Vapes</title>
     
 </head>
@@ -29,9 +30,9 @@
         <div class="nav-container">
             <nav>
                 <ul>
-                    <li><a href="#">Why P-Vapes</a></li>
+                    <a href="#whyus" id="usnav">Why P-Vapes?</a>
                     <li><a href="#">Shop Vapes</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#" id="contactLink">Contact Us</a></li>
                     <li><a href="#">FAQs</a></li>
                 </ul>
             </nav>
@@ -50,6 +51,35 @@
             </svg>
         </div>
     </header>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h2 class="contact-title">Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <a class="swipe">Send Message<span class="container">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </span></a>
+            </form>
+        </div>
+    </div>
+    
+    
 
     <section class="home">
 
@@ -70,8 +100,7 @@
             <div id="imageContainer" class="image-container">
                 <img id="image2" src="//vapematemx.com/cdn/shop/files/05._Double_Apple.webp?v=1720558054" alt="Image 2">
                 <img id="image3" src="//vapematemx.com/cdn/shop/files/Lemon_lime_ice_55257c0e-c55e-4fed-a5bb-d4e8d3b43e66.webp?v=1720565023" alt="Image 3">
-                <img id="image4" src="//vapematemx.com/cdn/shop/files/Asset12.png?v=1716224946" alt="Image 4">
-                    <img id="image7" src="//vapematemx.com/cdn/shop/files/LemonLimeIce.webp?v=1720208174" alt="Image 7">
+                <img id="image7" src="//vapematemx.com/cdn/shop/files/LemonLimeIce.webp?v=1720208174" alt="Image 7">
             </div>
         </div>
 
@@ -161,7 +190,41 @@
             </div>
         </div>
             
-        
+        <div id="whyus" class="whyus">
+            <h1 id="ustitle">Why P-VAPES?</h1>
+            
+            <div class="usparent">
+                <div class="usinfo1">
+                    <div class="number">3</div>
+                    <h2>Wide Range of Products</h2>
+                    <p>We offer a vast selection of products to cater to all preferences, ensuring you always find what you need.</p>
+                </div>
+                <div class="usinfo2">
+                    <div class="number">2</div>
+                    <h2>High Quality</h2>
+                    <p>We ensure that all our products meet the highest quality standards for your satisfaction.</p>
+                </div>
+                <div class="usinfo3">
+                    <div class="number">1</div>
+                    <h2>Local and National Shipping</h2>
+                    <p>We provide fast and secure shipping both locally and nationally, so you receive your order on time.</p>
+
+                </div>
+                <div class="usinfo4">
+                    <div class="number">4</div>
+                    <h2>Competitive Pricing</h2>
+                    <p>We offer affordable prices with options for deals, wholesale, and retail purchases to fit your budget.</p>
+
+                </div>
+                <div class="usinfo5">
+                    <div class="number">5</div>
+                    <h2>Security and Fast Delivery</h2>
+                    <p>We are committed to keeping your data secure and ensuring quick deliveries for a worry-free shopping experience.</p>
+
+                </div>
+            </div>
+    
+        </div>
 
         <div class="bento-container">
 
@@ -262,10 +325,10 @@
         
     </footer>
 
-    <script src="/public/js/scroll.js" defer></script>
-    <script src="/public/js/vapes.js"></script>
     <script src="/public/js/top.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script>
+    <script src="/public/js/whyus.js"></script>
+    <script src="/public/js/contactmoadl.js"></script>
+    <script src="/public/js/scroll.js" defer></script>
 
 </body>
 </html>

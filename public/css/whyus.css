@@ -1,0 +1,186 @@
+:root {
+    --black-primary: #0D0D0D;
+    --black-secondary: #1A1A1A;
+    --dark-gray: #333333;
+    --bright-yellow-green: #C8FF00;
+    --dark-yellow-green: #1d2400;
+    --soft-white: #F2F2F2;
+
+}
+
+#ustitle {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 0; /* Elimina márgenes para asegurar un centrado perfecto */
+    display: flex; /* Usa flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    height: 100%; /* Asegura que tome toda la altura disponible */
+    font-size: 4rem;
+}
+
+
+.usparent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 5px;
+    height: 170dvh;
+    margin-top: 100px;
+}
+
+.usinfo1, .usinfo2, .usinfo3, .usinfo4, .usinfo5{
+    border-radius: 70px;
+    
+    .number {
+        font-size: 36px; /* Tamaño del número */
+        font-weight: bold; /* Negrita para el número */
+        margin-bottom: 10px; /* Espacio debajo del número */
+    }
+    
+    h2 {
+        font-size: 24px; /* Tamaño del título */
+        margin: 10px 0; /* Espacio alrededor del título */
+    }
+    
+    p {
+        font-size: 16px; /* Tamaño de la descripción */
+        margin: 0; /* Elimina el margen del párrafo */
+
+    }
+
+}
+
+.usinfo1, .usinfo2{
+
+    .number{
+        font-size: 5rem;
+        color: var(--black-primary);
+    }
+
+    h2 {
+        font-size: 2rem; /* Tamaño del título */
+        margin: 10px 0; /* Espacio alrededor del título */
+        color: var(--black-secondary);
+    }
+
+    p {
+        font-size: 17px; /* Tamaño de la descripción */
+        margin: 0; /* Elimina el margen del párrafo */
+        color: #0D0D0D;
+        margin-top: 40px; /* Elimina el margen del párrafo */
+        margin-left: 10px;
+    }
+}
+
+.usinfo3, .usinfo4, .usinfo5{
+
+    .number{
+        font-size: 5rem;
+        color: var(--black-primary);
+        position: relative; /* Asegúrate de que no afecte la posición de la animación */
+
+    }
+
+    h2 {
+        font-size: 2rem; /* Tamaño del título */
+        margin: 10px 0; /* Espacio alrededor del título */
+        color: var(--black-secondary);
+        z-index: 1;
+    }
+
+    p {
+        font-size: 17px; /* Tamaño de la descripción */
+        margin: 0; /* Elimina el margen del párrafo */
+        color: #0D0D0D;
+        margin-top: 40px; /* Elimina el margen del párrafo */
+        margin-left: 10px;
+    }
+}
+    
+.usinfo1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 5;
+    background-color: rgb(235, 255, 161);
+    position: relative;
+    padding: 20px;
+
+    .numero{
+        position: relative;
+    }   
+}
+
+
+
+.usinfo2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 3;
+    background-color: rgb(235, 255, 161);
+    position: relative; /* Necesario para la posición absoluta de la animación */
+    padding: 20px; /* Opcional, para agregar espacio interno */
+
+    .number{
+        position: relative; /* Asegura que la animación esté en relación con el contenedor */
+
+    }
+}
+
+
+
+.usinfo3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    background-color: rgb(235, 255, 161);
+    position: relative; /* Necesario para posicionar los elementos hijos de manera absoluta */
+    padding: 20px; /* Opcional, para agregar espacio interno */
+
+    .numero{
+        position: relative;
+    }
+}
+
+
+
+.usinfo4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 7;
+    background-color: rgb(235, 255, 161);
+
+    .numero{
+        position: relative;
+    }
+
+}
+
+.usinfo5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 9;
+    background-color: rgb(235, 255, 161);
+
+    .numero{
+        position: relative;
+    }
+
+}
+
+.usparent > div {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    color: white;
+    border-radius: 70px;
+
+    .numero{
+        position: relative;
+    }
+}
+        
+
