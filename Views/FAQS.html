@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/public/css/Index.css">
+    <link rel="stylesheet" href="/public/css/modal.css">
     <link rel="stylesheet" href="/public/css/scrollbar.css">
     <link rel="stylesheet" href="/public/css/header.css">
-    <link rel="stylesheet" href="/public/css/whyus.css">
+    <link rel="stylesheet" href="/public/css/faqs.css">
     <link rel="stylesheet" href="/public/css/footer.css">
 
-    <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@300,400,500,600,700,1&f[]=clash-grotesk@200,300,400,500,600,700,1&f[]=styro@200,300,400,500,600,700&f[]=anton@400&f[]=archivo@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901,1,2&f[]=plein@300,301,400,401,500,501,700,701,900,901,1,2&f[]=sora@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,1,2&display=swap" rel="stylesheet">
-
-    <title>Why Us</title>
-
+    <title>Document</title>
 </head>
 <body>
 
@@ -23,10 +21,10 @@
         <div class="nav-container">
             <nav>
                 <ul>
-                    <li><a href="#">Why P-Vapes</a></li>
+                    <a href="../Index.html#whyus" id="usnav">Why P-Vapes?</a>
                     <li><a href="#">Shop Vapes</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#" id="contactLink">Contact Us</a></li>
+                    <li><a href="/Views/FAQS.html">FAQs</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,12 +43,104 @@
         </div>
     </header>
 
-    <section>
+    <div id="contactModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h2 class="contact-title">Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <a class="swipe">Send Message<span class="container">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </span></a>
+            </form>
+        </div>
+    </div>
 
-        
-
+    <section class="faqs-container">
+        <div class="faqs-title">
+            <h2>FAQS</h2>
+        </div>
+        <div class="faqs-content">
+            <div class="faq-category">
+                <h3>Cancelaciones</h3>
+                <div class="faq-details">
+                    <div class="faq-list">
+                        <div class="faq">
+                            <p class="question">¿Cómo puedo cancelar mi pedido?</p>
+                            <p class="answer">Puedes cancelar tu pedido contactando con nuestro servicio de atención al cliente dentro de las primeras 24 horas.</p>
+                        </div>
+                        <div class="faq">
+                            <p class="question">¿Hay algún cargo por cancelación?</p>
+                            <p class="answer">No, no cobramos cargos por cancelación si se realiza dentro del tiempo permitido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="faq-category">
+                <h3>Pagos</h3>
+                <div class="faq-details">
+                    <div class="faq-list">
+                        <div class="faq">
+                            <p class="question">¿Qué métodos de pago aceptan?</p>
+                            <p class="answer">Aceptamos tarjetas de crédito, PayPal y transferencias bancarias.</p>
+                        </div>
+                        <div class="faq">
+                            <p class="question">¿Puedo pagar a plazos?</p>
+                            <p class="answer">Sí, ofrecemos opciones de pago a plazos con ciertas condiciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="faq-category">
+                <h3>Envíos</h3>
+                <div class="faq-details">
+                    <div class="faq-list">
+                        <div class="faq">
+                            <p class="question">¿Hacen envíos internacionales?</p>
+                            <p class="answer">Sí, realizamos envíos a la mayoría de los países. Consulta nuestra lista de países disponibles en la sección de envíos.</p>
+                        </div>
+                        <div class="faq">
+                            <p class="question">¿Cuánto tiempo tarda en llegar mi pedido?</p>
+                            <p class="answer">El tiempo de entrega varía según la ubicación, generalmente entre 5 y 10 días hábiles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="faq-category">
+                <h3>Ubicación</h3>
+                <div class="faq-details">
+                    <div class="faq-list">
+                        <div class="faq">
+                            <p class="question">¿Dónde se encuentran sus tiendas físicas?</p>
+                            <p class="answer">Nuestras tiendas físicas están ubicadas en las principales ciudades del país. Consulta nuestra página de ubicaciones para más detalles.</p>
+                        </div>
+                        <div class="faq">
+                            <p class="question">¿Puedo recoger mi pedido en una tienda?</p>
+                            <p class="answer">Sí, ofrecemos la opción de recogida en tienda para ciertos productos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
+    
     <footer>
 
         <div class="top-section">
@@ -130,6 +220,11 @@
         </div>
         
     </footer>
+
+    <script src="/public/js/top.js"></script>
+    <script src="/public/js/whyus.js"></script>
+    <script src="/public/js/contactmoadl.js"></script>
+    <script src="/public/js/scroll.js" defer></script>
     
 </body>
 </html>

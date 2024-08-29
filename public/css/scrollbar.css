@@ -1,7 +1,7 @@
 body {
-    --sb-track-color: #000000;
-    --sb-thumb-color: #C8FF00;
-    --sb-size: 7px;
+    --sb-track-color: #00000000;
+    --sb-thumb-color: #c8ff0000;
+    --sb-size: 0;
   }
   
   body::-webkit-scrollbar {
