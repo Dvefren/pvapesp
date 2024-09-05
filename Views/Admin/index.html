@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS AND STYLES -->
+    <link rel="stylesheet" href="../../public/css/indexAdmin.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <table class="table">
+        <thead class="head-table">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>Brand</th>
+            <th>Flavor</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="t-body">
+          <!-Here will be the table body with the data from the database->
+        </tbody>
+      </table>
+    </div>
+<button id="createV">Create a Vape</button>
+    <!-- Modal for Create a Vape -->
+    <div id="modal-container" class="modal hidden">
+      <div class="modal-content">
+        <div class="container">
+          <div class="title-p">
+            <h1>Create a Vape</h1>
+          </div>
+          <div class="form-p">
+            <form class="form-v" id="form-v">
+            <div class="vape">
+              <label for="" class="name">Name</label>
+              <input type="text" id="name" />
+              <label for="" class="description">Description</label>
+              <input type="text" id="description" />
+              <label for="" class="price">Price</label>
+              <input type="number" id="price" />
+              <label for="" class="status">Staus</label>
+              <input type="checkbox" id="status" value="true" />
+              <label for="" class="brand">Brand</label>
+              <input type="text" id="brand" />
+              <label for="" class="flavor">Flavor</label>
+              <input type="text" id="flavor" />
+              <lable class="image">Image</lable>
+              <input type="file"id="image" />
+              </div>
+              <div class="details">
+              <lable class="nicotine">Nicotine</lable>
+              <input type="text" id="nicotine" />
+              <label for="" class="liquid">E_Liquid</label>
+              <input type="text" id="liquid">
+              <label for="" class="mah">mAh</label>
+              <input type="text" id="mah">
+              <label for="" class="uses">Uses</label>
+              <input type="text" id="uses">
+              <label for="" class="rechargable">Rechargable</label>
+              <input type="checkbox" id="rechargable" value="true">
+              </div>
+              <div class="buttons">
+                <button type="button" class="btn Cancel">Cancel</button>
+                <button type="submit" class="btn Create">Create</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- JS FILES -->
+     <script src="../../public/js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../api/vapes/vapes.js"></script>
+  </body>
+</html>

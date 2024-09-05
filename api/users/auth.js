@@ -5,7 +5,7 @@
 // We get the Form
 const formR = document.getElementById("regis");
 
-const API = "https://localhost:44363/api";
+const API = "https://localhost:44315/api";
 
 if (formR) {
 // Then we set a listener on the submit event to catch the form data and send it to the server
