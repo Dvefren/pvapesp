@@ -3,6 +3,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import cookieParser from "cookie-parser";
+import fileUpload from "express-fileupload";
 
 //Middlewares
 import { AuthCookie } from "./middlewares/CookieAuth.js";
@@ -21,6 +22,12 @@ app.listen(PORT, () => {
 app.use(express.static(_dirname));
 app.use(express.json());
 app.use(cookieParser());
+app.use(fileUpload(
+  {
+    useTempFiles: true,
+    tempFileDir: path.join(_dirname, 'public/img')
+  }
+));
 
 // Routes
 app.get("/home", AuthCookie.OnlyLoggedIn, (req, res) => {
