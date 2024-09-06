@@ -1,5 +1,4 @@
-// Imported functions
-// import { uploadImage } from "../../utils/cloudinary.js";
+
 
 // VAPES API CALLS
 const API = "https://localhost:44315/api";
@@ -25,7 +24,7 @@ axios.get(`${API}/vapes`, {
             <td>${vape.flavor}</td>
             <td>
                 <button class="edit-btn" data-id="${vape.vapeId}">Editar</button>
-                <button class="delete-btn" data-id="${vape.vapeId}">Eliminar</button>
+                <button class="delete-btn" id="delete" data-id="${vape.vapeId}">Eliminar</button>
             </td>
         `;
         tbody.appendChild(row);
@@ -68,12 +67,56 @@ const formData = new FormData();
     }
   })
   .then(function (response) {
-    if (response.status == 200) {
+    if (response.status == 201) {
       alert("Vape created successfully!");
-      window.location.href = "/";
+      window.location.href = "/Views/admin/index.html"; 
     }
 })
 .catch(function (error) {
     alert("Error creating vape" + error);
 })
 })
+
+// DELETE A VAPE
+
+// Attach the event listener to a parent element that exists when the page loads
+document.addEventListener('click', function(e) {
+  // Check if the clicked element or its parent is a delete button
+  const deleteBtn = e.target.closest('.delete-btn');
+  
+  if (deleteBtn) {
+    const id = deleteBtn.dataset.id;
+    
+    axios.delete(`${API}/delete/vape?id=${id}`)
+      .then(function (response) {
+        if (response.status == 200 || response.status == 204) {
+          window.location.href = "/Views/admin/index.html";
+          console.log(response);
+        }
+      })
+      .catch(function (error) {
+        alert("Error deleting vape" + error);
+        console.log(error);
+      });
+  }
+});
+
+// const deleteBtn = document.querySelectorAll(".delete-btn");
+// deleteBtn.forEach(function (btn) {
+//   btn.addEventListener("click", (e) => {
+
+//     const id = btn.dataset.id;
+
+//   axios.delete(`${API}/delete/vape?id=${id}`)
+//     .then(function (response) {
+//       if (response.status == 200) {
+//         alert("Vape deleted successfully!");
+//         window.location.href = "/Views/admin/index.html";
+//       }
+//     })
+//     .catch(function (error) {
+//       alert("Error deleting vape" + error);
+//       console.log(error);
+//     });
+//   })
+// });
