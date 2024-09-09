@@ -5,20 +5,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/public/css/Menu.css">
+    <link rel="stylesheet" href="/public/css/Index.css">
+    <link rel="stylesheet" href="/public/css/modal.css">
+    <link rel="stylesheet" href="/public/css/scrollbar.css">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/menu.css">
     <link rel="stylesheet" href="/public/css/footer.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=sora@300,400,500,600,700&display=swap" rel="stylesheet"> 
+
+    <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@300,400,500,600,700,1&f[]=clash-grotesk@200,300,400,500,600,700,1&f[]=styro@200,300,400,500,600,700&f[]=anton@400&f[]=archivo@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901,1,2&f[]=plein@300,301,400,401,500,501,700,701,900,901,1,2&f[]=sora@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,1,2&display=swap" rel="stylesheet">
 
     <title>P-Vapes Menu</title>
 
 </head>
 <body>
 
+    <header>
+        <a href="/Index.html"><div class="logo">LOGO</div></a>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <a href="../Index.html#whyus" id="usnav">Why P-Vapes?</a>
+                    <li><a href="/Views/Menu.html">Shop Vapes</a></li>
+                    <li><a href="#" id="contactLink">Contact Us</a></li>
+                    <li><a href="/Views/FAQS.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="icons-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#c8ff00" fill="none">
+                <path d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#c8ff00" fill="none">
+                <path d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+        </div>
+    </header>
 
+    <div id="contactModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h2 class="contact-title">Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <a class="swipe">Send Message<span class="container">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </span></a>
+            </form>
+        </div>
+    </div>
 
-    <section>
+    <section class="brands-section">
+        
+        <div class="brand" id="iplay"> 
+            <div class="iplay-grid">
+                <div class="iplay-max">
+                    <div class="image-container">
+                        <img src="https://static.wixstatic.com/media/d3a376_067f5ba9f07446aabdabd10ebea48b8a~mv2.png/v1/fill/w_525,h_525,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d3a376_067f5ba9f07446aabdabd10ebea48b8a~mv2.png" alt="IPlay Max Image">
+                    </div>
+                </div>
+                <div class="iplay-title">
+                    <img src="https://www.iplayvape.com/uploads/logo.png" alt="IPlay Title Image">
+                </div>
+                <div class="iplay-ecco">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/BLACKCURRANT.webp?v=1719507392" alt="IPlay Ecco Image">
+                    </div>
+                </div>
+                <div class="iplay-xbox">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/17._Tulum_Mint.webp?v=1720558054" alt="IPlay Xbox Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand" id="vplay">
+            <div class="vplay-grid">
+                <div class="vplay-logo">
+                    <div class="image-container">
+                        <img src="/public/img/brands/vp_menu.png" alt="VPlay Logo Image">
+                    </div>
+                </div>
+                <div class="vplay">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/merry_berry_craftbox_v-play_20k_puffs_disposable_171406.webp?v=1719515106" alt="VPlay Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand" id="bugatti">
+            <div class="bugatti-grid">
+                <div class="bugatti-logo">
+                    <div class="image-container">
+                        <img src="/public/img/brands/bugatti_menu.png" alt="Bugatti Logo">
+                    </div>
+                </div>
+                <div class="bugatti-vape">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/Asset12.png?v=1716224946" alt="Bugatti Vape">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand" id="czar">
+            <div class="czar-grid">
+                <div class="czar-logo">
+                    <div class="image-container">
+                        <img src="/public/img/brands/czar_menu.png" alt="Czar Logo">
+                    </div>
+                </div>
+                <div class="czar-vape">
+                    <div class="image-container">
+                        <img src="/public/img/vapes/CZAR/czar-02-home.png" alt="Czar Vape">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="brand" id="geek-bar">
+            <div class="geek-grid">
+                <div class="geek-vape">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/StrawberryMango_132217.webp?v=1720022776" alt="Geek Vape">
+                    </div>
+                </div>
+                <div class="geek-logo">
+                    <div class="image-container">
+                        <img src="https://myvapereview.com/vape-deals/wp-content/uploads/sites/2/2022/07/Geek-Bar.png" alt="Geek Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand" id="insta-bar">           
+            <div class="insta-grid">
+                <div class="insta-ultra">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/Instabar_Ultra_12000_-_Straberry_Mint_97978e0d-7523-4b30-a7a6-1f629b624d78.webp?v=1719965002" alt="Insta Ultra">
+                    </div>
+                </div>
+                <div class="insta-hyper">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/WatermelonSmash.webp?v=1720208174" alt="Insta Hyper">
+                    </div>
+                </div>
+                <div class="insta-max">
+                    <div class="image-container">
+                        <img src="https://th.bing.com/th/id/R.babb157c860648db8437c49c4ccfb412?rik=FOsA27uZP9pHBg&riu=http%3a%2f%2finstabar.net%2fcdn%2fshop%2ffiles%2fInstabarAir600-12.png%3fv%3d1685427191&ehk=o8eDZaR31yVntwvFDR2jHyEOM7xbF3HsXcO6ysKlwX4%3d&risl=&pid=ImgRaw&r=0" alt="Insta Max">
+                    </div>
+                </div>
+                <div class="insta-wt">
+                    <div class="image-container">
+                        <img src="//vapematemx.com/cdn/shop/files/Watermelon_Smash_back_4b67e0e0-0e64-4ed0-88ca-9f67d9a31349.webp?v=1720204452" alt="Insta WT">
+                    </div>
+                </div>
+                <div class="insta-logo">
+                    <div class="image-container">
+                        <img src="/public/img/brands/instabar_menu.png" alt="Insta Logo">
+                    </div>
+                </div>
+                <div class="insta-jar">
+                    <div class="image-container">
+                        <img src="https://kingvapdubai.ae/wp-content/uploads/2023/03/WhatsApp-Image-2022-11-16-at-3.06.56-PM.jpeg" alt="Insta Jar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </section>
     
+      
     <footer>
 
         <div class="top-section">
@@ -100,7 +277,9 @@
     </footer>
 
     <script src="/public/js/top.js"></script>
-    <script src="/public/js/cursor.js"></script>
+    <script src="/public/js/whyus.js"></script>
+    <script src="/public/js/contactmoadl.js"></script>
+    <script src="/public/js/scroll.js" defer></script>
 
 </body>
 </html>

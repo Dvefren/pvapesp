@@ -1,0 +1,471 @@
+:root {
+    --pastel-rosa-claro: #FFB3BA;
+    --pastel-melocoton-suave: #FFDFBA;
+    --pastel-amarillo-suave: #FFFFBA;
+    --pastel-verde-menta-claro: #BAFFC9;
+    --pastel-azul-bebe: #BAE1FF;
+    --pastel-lila-claro: #E6B3FF;
+    --pastel-rosa-lavanda: #FFC2E2;
+    --pastel-verde-aguamarina: #C2FFD2;
+    --pastel-melon-suave: #FFE2C2;
+    --pastel-purpura-pastel: #E2C2FF;
+    --pastel-rosa-chicle: #FFD1DC;
+    --pastel-rosa-antiguo: #D4A5A5;
+    --pastel-coral-pastel: #F3B2B2;
+    --pastel-verde-manzana: #B0E57C;
+    --pastel-rosa-almendra: #F3D8E0;
+    --pastel-azul-lavanda: #C7CEEA;
+    --pastel-amarillo-mantequilla: #FFF1C1;
+    --pastel-magenta-pastel: #F0C3F0;
+    --pastel-violeta-pastel: #E0C3F0;
+    --pastel-cian-claro: #C3F0F0;
+}
+
+.brands-section {
+    height: auto;
+    padding: 50px;
+}
+
+.brand {
+    margin-bottom: 20dvh; /* Ajusta el margen inferior para separar cada marca */
+}
+
+.iplay-grid {
+    display: grid;
+    height: 90dvh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 4px;
+    font-family: 'Archivo', sans-serif;
+    font-style: italic;
+}
+
+.iplay-grid .image-container {
+    position: relative;
+    width: 90%;
+    height: 90%;
+}
+
+.iplay-grid .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 0; /* Asegura que la imagen esté en la parte superior */
+    opacity: 0.7; /* Aplica una opacidad a la imagen */
+    transition: opacity 0.5s ease; /* Agrega una transición suave para la opacidad */
+}
+
+.iplay-max {
+    grid-row: span 7 / span 7;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(45deg, #97c4ff, #6aa8ff); /* Gradiente específico para iplay-max */
+    display: flex; /* Establece el contenedor como un contenedor flex */
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+.iplay-max .image-container {
+    width: 50%; /* Ajusta el ancho del contenedor de la imagen */
+    height: 100%; /* Ajusta la altura del contenedor de la imagen */
+}
+
+.iplay-max .image-container img {
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: 60%; /* Mantiene la relación de aspecto de la imagen */
+    margin-top: 100%;
+}
+
+.iplay-max:hover .image-container img {
+    opacity: 1; /* Hace que la imagen sea completamente visible al hacer hover */
+}
+
+.iplay-title {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    background: linear-gradient(45deg, #6bbfff, #aaebff, #8bcdff); /* Gradiente específico para iplay-title */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 20px;
+}
+
+
+.iplay-ecco {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    background: linear-gradient(45deg, #85beff, #93c5ff, #9fc3eb); /* Gradiente específico para iplay-ecco */
+}
+
+.iplay-ecco:hover .image-container img {
+    opacity: 1; /* Hace que la imagen sea completamente visible al hacer hover */
+}
+
+.iplay-xbox {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 4;
+    background: linear-gradient(45deg, #90c0ff, #a1d6ff, #9df8ff); /* Gradiente específico para iplay-xbox */
+    border-bottom-right-radius: 20px;
+}
+
+.iplay-xbox:hover .image-container img {
+    opacity: 1; /* Hace que la imagen sea completamente visible al hacer hover */
+}
+
+
+.vplay-grid {
+    display: grid;
+    height: 60dvh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 4px;
+}
+
+.vplay-logo {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    background: linear-gradient(45deg, #d8a9ff, #ddb3ff, #edd7ff); /* Gradiente específico para iplay-xbox */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.vplay {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    background: linear-gradient(45deg, #edd7ff, #ddb3ff, #d199ff); /* Gradiente específico para iplay-xbox */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.vplay-logo .image-container {
+    position: relative;
+    width: 100%; /* Asegura que el contenedor de la imagen ocupe todo el ancho disponible */
+    height: 100%; /* Asegura que el contenedor de la imagen ocupe toda la altura disponible */
+    display: flex; /* Centra la imagen dentro del contenedor */
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    border-radius: 20px; /* Aplica un borde redondeado a las imágenes */
+}
+
+.vplay-logo .image-container img {
+    width: 100%; /* La imagen ocupará el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Agrega una transición suave para opacidad y transformación */
+    border-radius: 20px; /* Aplica un borde redondeado a las imágenes */
+    z-index: 1; /* Mantiene la imagen por encima de otros elementos */
+}
+
+
+.vplay .image-container {
+    position: relative;
+    width: 100%; /* Asegura que el contenedor de la imagen ocupe todo el ancho disponible */
+    height: 100%; /* Asegura que el contenedor de la imagen ocupe toda la altura disponible */
+    display: flex; /* Centra la imagen dentro del contenedor */
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    border-radius: 20px; /* Aplica un borde redondeado a las imágenes */
+}
+
+.vplay .image-container img {
+    width: 50%; /* La imagen ocupará el 100% del contenedor */
+    height: 100%; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Agrega una transición suave para opacidad y transformación */
+    border-radius: 20px; /* Aplica un borde redondeado a las imágenes */
+    z-index: 1; /* Mantiene la imagen por encima de otros elementos */
+    opacity: .85;
+}
+
+.vplay .image-container img:hover {
+    opacity: 1; /* Hace la imagen un poco más visible al hacer hover */
+}
+
+.bugatti-grid {
+    height: 60dvh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.bugatti-logo {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    background: linear-gradient(45deg, #ddff75, #a3d84e, #85d679); /* Gradiente específico para iplay-xbox */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.bugatti-vape {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background: linear-gradient(45deg, #85d679, #a3d84e, #ddff75); /* Gradiente específico para iplay-xbox */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.bugatti-logo .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.bugatti-logo .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bugatti-vape .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.bugatti-vape .image-container img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .7;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bugatti-vape .image-container img:hover {
+    opacity: 1;
+}
+
+.czar-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 8px;
+    height: 60dvh;
+}
+
+.czar-logo {
+    grid-column: span 3 / span 3;
+    grid-row: span 6 / span 6;
+    background-color: #e1e1b3; /* Cian claro */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.czar-vape {
+    grid-column: span 3 / span 3;
+    grid-row: span 6 / span 6;
+    grid-column-start: 4;
+    background: linear-gradient(45deg, #dbdbc1, #f8f8c7, #ffff9d); /* Gradiente específico para iplay-xbox */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.czar-logo .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.czar-logo .image-container img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.czar-vape .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.czar-vape .image-container img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    opacity: .7;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.czar-vape .image-container img:hover {
+    opacity: 1;
+}
+
+
+.geek-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    height: 60dvh;
+}
+    
+.geek-vape {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    background: linear-gradient(45deg, #ffc978, #ffbe5c, #ffaa29); /* Gradiente específico para iplay-xbox */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.geek-logo {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 4;
+    background: linear-gradient(45deg, #ffaa29, #ffbe5c, #ffc978); /* Gradiente específico para iplay-xbox */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.geek-logo .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.geek-logo .image-container img {
+    width: 65%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.geek-vape .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.geek-vape .image-container img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    opacity: .7;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.geek-vape .image-container img:hover {
+    opacity: 1;
+}
+
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 8px;
+    height: 100vh;
+}
+
+.insta-ultra, .insta-hyper, .insta-max, .insta-wt, .insta-logo, .insta-jar {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff6a6a, #ff7777, #ffb6b6); /* Gradiente específico para iplay-xbox */
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 20px;
+}
+
+.image-container img:hover {
+    opacity: 0.9;
+}
+
+.insta-ultra {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+}
+
+.insta-hyper {
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+}
+
+.insta-max {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 7;
+}
+
+.insta-wt {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 7;
+    grid-row-start: 6;
+}
+
+.insta-logo {
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 5;
+}
+
+.insta-jar {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 1;
+    grid-row-start: 6;
+}
+
+        
+        
